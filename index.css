@@ -1,0 +1,281 @@
+/* General Style */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: hsl(207, 100%, 23%);
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+nav ul li:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  top: 100%;
+  left: 0;
+  min-width: 120px;
+}
+
+.dropdown-content a {
+  display: block;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #eee;
+}
+
+/* Intro Section */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px 20px;
+  background-color: #f0f8ff;
+}
+
+.foto-profil {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid hsl(207, 100%, 23%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.foto-profil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.foto-profil:hover img {
+  transform: scale(1.1);
+}
+
+.deskripsi {
+  text-align: left;
+}
+
+.deskripsi h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+  color: hsl(207, 100%, 23%);
+}
+
+.deskripsi p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Tentang Saya */
+.tentang-saya {
+  padding: 30px;
+  background: #f9f9f9;
+}
+
+.container-tentang {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.text-tentang {
+  flex: 1;
+}
+
+.foto-tentang {
+  flex: 1;
+  text-align: right;
+}
+
+.foto-tentang-img {
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Portofolio */
+.portofolio {
+  padding: 30px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid hsl(207, 100%, 23%);
+}
+
+th {
+  background: hsl(207, 100%, 23%);
+  color: white;
+}
+
+td img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.nomor {
+  text-align: center;
+}
+
+/* Opin */
+.grid-opini {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.item-opini {
+  background: #fff;
+  border: 1px solid hsl(207, 100%, 23%);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.item-opini:hover {
+  background: #ffe0ec;
+  box-shadow: 0 4px 10px rgba(252, 126, 199, 0.3);
+}
+
+.item-opini img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.item-opini p {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Kontak */
+.kontak {
+  padding: 30px;
+  text-align: center;
+}
+
+.kontak-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.form-kontak {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.form-kontak label {
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.form-kontak input,
+.form-kontak textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-kontak button {
+  background: hsl(207, 100%, 23%);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.map-kontak {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.map-kontak iframe {
+  width: 100%;
+  height: 300px;
+}
+
+/* Footer */
+footer {
+  background: hsl(207, 100%, 23%);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro, .container-tentang {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .foto-tentang {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid-opini {
+    grid-template-columns: 1fr;
+  }
+}
